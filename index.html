@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidade | Cupons de Descontos</title>
+  <meta name="description" content="Política de Privacidade oficial do aplicativo Cupons de Descontos. Transparência sobre dados, LGPD e divulgação de links de afiliados." />
+
+  <!-- Fontes Google: Inter e Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuração customizada de cores e fontes no Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#FFF4ED',
+              100: '#FFE6D5',
+              200: '#FECCAA',
+              300: '#FDA874',
+              400: '#FB793C',
+              500: '#FF5500', // Laranja vibrante principal da logo
+              600: '#E04400', // Laranja escuro para hover/gradiente
+              700: '#B83300',
+              800: '#932906',
+              900: '#772409',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos de impressão para salvar como PDF limpo */
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background-color: #ffffff !important;
+        color: #111827 !important;
+      }
+      main {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      section {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #e5e7eb !important;
+      }
+    }
+
+    /* Ocultar barra de rolagem horizontal no menu mobile mantendo funcionalidade */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Toast / Notificação Flutuante (Substitui alert()) -->
+  <div id="toast-notification" role="status" aria-live="polite"
+       class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none no-print">
+    <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl border border-slate-700 flex items-center gap-3 text-sm font-medium">
+      <span class="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </span>
+      <span id="toast-message">Texto copiado com sucesso!</span>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="bg-white border-b border-slate-200/80 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        
+        <!-- Logo Oficial do App (SVG Fiel à Imagem Enviada) -->
+        <a href="#" class="flex items-center gap-3.5 group focus:outline-none">
+          <div class="relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 drop-shadow-md transition-transform duration-200 group-hover:scale-105">
+            <!-- SVG recriando exatamente o ícone: quadrado arredondado laranja, etiqueta branca com furo inferior e tíquete inclinado com % -->
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full rounded-2xl">
+              <defs>
+                <linearGradient id="appBgGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF6200"/>
+                  <stop offset="100%" stop-color="#F24900"/>
+                </linearGradient>
+                <linearGradient id="ticketGrad" x1="35" y1="55" x2="165" y2="115" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FF6B1A"/>
+                  <stop offset="100%" stop-color="#EA4800"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Fundo quadrado com cantos bem arredondados -->
+              <rect x="4" y="4" width="192" height="192" rx="44" fill="url(#appBgGrad)"/>
+
+              <!-- Círculo sutil de brilho/profundidade atrás da etiqueta -->
+              <circle cx="112" cy="112" r="56" fill="#FF7B29" fill-opacity="0.35"/>
+
+              <!-- Etiqueta (Tag) branca traseira com furo circular embaixo -->
+              <g transform="rotate(-14 100 105)">
+                <path d="M58 55 C58 34, 142 34, 142 55 L142 128 C142 145, 118 164, 100 164 C82 164, 58 145, 58 128 Z" fill="#FFFFFF"/>
+                <!-- Furo da etiqueta -->
+                <circle cx="80" cy="138" r="9.5" fill="#F65000"/>
+              </g>
+
+              <!-- Sombra suave projetada pelo tíquete sobre a etiqueta branca -->
+              <g transform="rotate(-13 100 94)">
+                <rect x="34" y="66" width="132" height="62" rx="12" fill="#B83300" fill-opacity="0.22"/>
+              </g>
+
+              <!-- Tíquete de Desconto principal com borda branca espessa e recortes laterais -->
+              <g transform="rotate(-13 100 90)">
+                <!-- Base branca formando o contorno externo -->
+                <path d="M40 54 H160 A10 10 0 0 1 170 64 V76 A14 14 0 0 0 170 104 V116 A10 10 0 0 1 160 126 H40 A10 10 0 0 1 30 116 V104 A14 14 0 0 0 30 76 V64 A10 10 0 0 1 40 54 Z" fill="#FFFFFF"/>
+                
+                <!-- Interior laranja do tíquete -->
+                <path d="M43 59 H157 A6 6 0 0 1 163 65 V73 A18 18 0 0 0 163 107 V115 A6 6 0 0 1 157 121 H43 A6 6 0 0 1 37 115 V107 A18 18 0 0 0 37 73 V65 A6 6 0 0 1 43 59 Z" fill="url(#ticketGrad)"/>
+
+                <!-- Linhas pontilhadas verticais do tíquete -->
+                <line x1="63" y1="63" x2="63" y2="117" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="3 7"/>
+                <line x1="137" y1="63" x2="137" y2="117" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="3 7"/>
+
+                <!-- Símbolo de Porcentagem (%) no centro -->
+                <circle cx="88" cy="79" r="7.5" stroke="#FFFFFF" stroke-width="5.5"/>
+                <circle cx="112" cy="101" r="7.5" stroke="#FFFFFF" stroke-width="5.5"/>
+                <line x1="113" y1="73" x2="87" y2="107" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-brand-600 leading-none">
+                Cupons de Descontos
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+              Central de Privacidade &amp; Transparência
+            </p>
+          </div>
+        </a>
+
+        <!-- Selo LGPD, Data e Botão de Ação Rápida -->
+        <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 no-print">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            Conformidade LGPD
+          </span>
+
+          <button onclick="window.print()"
+                  class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer">
+            <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5zm-3 0h.008v.008H15V10.5z" />
+            </svg>
+            Imprimir / PDF
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra de Navegação Horizontal Rápida para Mobile/Tablet -->
+    <nav aria-label="Navegação rápida mobile" class="lg:hidden border-t border-slate-100 bg-slate-50/90 backdrop-blur-sm no-print">
+      <div class="max-w-6xl mx-auto px-4 py-2.5 flex items-center gap-2 overflow-x-auto no-scrollbar text-xs font-medium">
+        <a href="#introducao" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">1. Introdução</a>
+        <a href="#afiliados" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-brand-50 border border-brand-200 text-brand-700 font-semibold">2. Afiliados &amp; Links</a>
+        <a href="#coleta-dados" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">3. Coleta de Dados</a>
+        <a href="#uso-informacoes" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">4. Uso dos Dados</a>
+        <a href="#compartilhamento" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">5. Terceiros</a>
+        <a href="#direitos-lgpd" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">6. Direitos LGPD</a>
+        <a href="#seguranca" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">7. Segurança</a>
+        <a href="#publico-infantil" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">8. Menores</a>
+        <a href="#contato" class="nav-pill shrink-0 px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">9. Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner / Hero da Política de Privacidade -->
+  <div class="bg-gradient-to-br from-brand-500 via-brand-600 to-orange-700 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-xs sm:text-sm font-medium mb-4">
+          <span class="w-2 h-2 rounded-full bg-amber-300 animate-pulse"></span>
+          Última atualização: Novembro de 2026
+        </div>
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          Política de Privacidade
+        </h1>
+        <p class="mt-4 text-base sm:text-lg text-orange-50 leading-relaxed">
+          Transparência total sobre como o aplicativo <strong>Cupons de Descontos</strong> protege sua privacidade, opera com links de parceiros afiliados e respeita a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).
+        </p>
+
+        <!-- Resumo rápido em 3 pilares -->
+        <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3.5 flex items-start gap-2.5">
+            <svg class="w-5 h-5 text-amber-200 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+            </svg>
+            <div>
+              <span class="font-semibold block text-white">Sem Cadastro Obrigatório</span>
+              <span class="text-xs text-orange-100">Acesse cupons livremente sem criar conta.</span>
+            </div>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3.5 flex items-start gap-2.5">
+            <svg class="w-5 h-5 text-amber-200 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+            </svg>
+            <div>
+              <span class="font-semibold block text-white">Zero Venda de Dados</span>
+              <span class="text-xs text-orange-100">Nunca comercializamos informações pessoais.</span>
+            </div>
+          </div>
+
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-3.5 flex items-start gap-2.5">
+            <svg class="w-5 h-5 text-amber-200 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+              <span class="font-semibold block text-white">Divulgação Clara</span>
+              <span class="text-xs text-orange-100">Transparência em links de afiliados.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal com Sidebar Fixa em Desktop -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-start">
+
+      <!-- Índice Lateral Fixo (Desktop) -->
+      <aside class="hidden lg:block lg:col-span-4 xl:col-span-3 sticky top-24 space-y-6 no-print">
+        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-5">
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3.5">
+            Índice do Documento
+          </h2>
+          <nav aria-label="Índice da Política de Privacidade" class="space-y-1">
+            <a href="#introducao" data-section="introducao" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">1</span>
+              Introdução e Aceitação
+            </a>
+            <a href="#afiliados" data-section="afiliados" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-brand-100 text-brand-600 text-xs font-bold flex items-center justify-center">2</span>
+              Afiliados e Links Externos
+            </a>
+            <a href="#coleta-dados" data-section="coleta-dados" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">3</span>
+              Coleta de Dados
+            </a>
+            <a href="#uso-informacoes" data-section="uso-informacoes" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">4</span>
+              Uso das Informações
+            </a>
+            <a href="#compartilhamento" data-section="compartilhamento" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">5</span>
+              Compartilhamento
+            </a>
+            <a href="#direitos-lgpd" data-section="direitos-lgpd" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">6</span>
+              Direitos do Usuário (LGPD)
+            </a>
+            <a href="#seguranca" data-section="seguranca" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">7</span>
+              Segurança e Retenção
+            </a>
+            <a href="#publico-infantil" data-section="publico-infantil" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">8</span>
+              Público Infantil
+            </a>
+            <a href="#contato" data-section="contato" class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 hover:bg-slate-50 hover:text-brand-600 transition-all">
+              <span class="w-5 h-5 rounded-md bg-slate-100 text-slate-500 text-xs font-bold flex items-center justify-center">9</span>
+              Alterações e Contato
+            </a>
+          </nav>
+
+          <div class="mt-5 pt-4 border-t border-slate-100">
+            <button onclick="copyPolicyText()"
+                    class="w-full flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-white transition-colors cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              Copiar Texto da Política
+            </button>
+          </div>
+        </div>
+
+        <!-- Card Lateral de Destaque do Link Oficial de Afiliado -->
+        <div class="bg-gradient-to-br from-brand-50 to-orange-100/70 rounded-2xl border border-brand-200 p-5 shadow-sm">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[11px] font-bold uppercase tracking-wide bg-brand-500 text-white">
+              Link de Afiliado Oficial
+            </span>
+          </div>
+          <h3 class="font-display font-bold text-slate-900 text-base mt-2">
+            Ofertas e Cupons Parceiros
+          </h3>
+          <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+            Acesse nossa vitrine oficial de ofertas selecionadas. Ao comprar pelo link, você apoia o app sem pagar nada a mais por isso.
+          </p>
+          <a href="https://s.shopee.com.br/2gCfp5hdzC" target="_blank" rel="noopener noreferrer sponsored"
+             class="mt-4 w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-all">
+            <span>Acessar Ofertas na Shopee</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Corpo Jurídico da Política de Privacidade -->
+      <div id="policy-content" class="lg:col-span-8 xl:col-span-9 space-y-6">
+
+        <!-- Seção 1: Introdução e Aceitação -->
+        <section id="introducao" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">1</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Introdução e Aceitação
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Bem-vindo ao aplicativo <strong>Cupons de Descontos</strong> (também identificado visualmente como <em>"Cupons de Desconto"</em>). Esta Política de Privacidade descreve de maneira transparente como coletamos, utilizamos, armazenamos e protegemos as informações relacionadas ao uso do nosso aplicativo móvel e serviços associados.
+            </p>
+            <p>
+              O <strong>Cupons de Descontos</strong> tem como finalidade principal reunir, organizar e divulgar ofertas, promoções relâmpago e códigos promocionais disponíveis em plataformas de comércio eletrônico parceiras, facilitando a economia dos usuários em suas compras online.
+            </p>
+            <p>
+              Ao baixar, acessar ou utilizar o aplicativo <strong>Cupons de Descontos</strong>, você declara que leu, compreendeu e concorda com os termos descritos nesta Política de Privacidade, elaborada em total conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (LGPD — Lei Federal nº 13.709/2018)</strong> e com as diretrizes de privacidade da <strong>Google Play Store</strong> e da <strong>Apple App Store</strong>. Caso não concorde com qualquer disposição aqui prevista, recomendamos que interrompa o uso do aplicativo.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 2: Divulgação de Afiliados e Links Externos (Destacada) -->
+        <section id="afiliados" class="scroll-mt-28 bg-gradient-to-br from-brand-50/90 via-white to-orange-50/70 rounded-2xl border-2 border-brand-300 shadow-sm p-6 sm:p-8 relative overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-brand-500 text-white font-display font-bold text-sm flex items-center justify-center shrink-0 shadow-sm">2</span>
+              <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+                Divulgação de Afiliados e Links Externos
+              </h2>
+            </div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-brand-500 text-white">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+              </svg>
+              Transparência Comercial
+            </span>
+          </div>
+
+          <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p>
+              Para manter o aplicativo gratuito e atualizado diariamente com as melhores oportunidades, o <strong>Cupons de Descontos</strong> participa de programas oficiais de marketing de afiliados, incluindo, mas não se limitando, ao <strong>Programa de Afiliados da Shopee</strong>.
+            </p>
+            <ul class="space-y-2.5 pl-1">
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-500/15 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <span><strong>Comissionamento sem custo extra:</strong> Quando você clica em um cupom, oferta ou link promocional dentro do nosso aplicativo (por exemplo, <a href="https://s.shopee.com.br/2gCfp5hdzC" target="_blank" rel="noopener noreferrer sponsored" class="text-brand-600 font-semibold underline decoration-brand-400 hover:text-brand-700 break-all">https://s.shopee.com.br/2gCfp5hdzC</a>) e realiza uma compra qualificada no site ou aplicativo do parceiro, poderemos receber uma comissão de afiliado. Isso <strong>não gera nenhum acréscimo ou custo adicional</strong> ao valor final pago por você.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-500/15 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <span><strong>Redirecionamento para terceiros:</strong> O <strong>Cupons de Descontos</strong> não realiza vendas diretas, não processa pagamentos e não intermedia entregas. Ao clicar em uma oferta, você é redirecionado para ambientes externos pertencentes às lojas parceiras (como a Shopee), que possuem seus próprios Termos de Uso e Políticas de Privacidade.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="w-5 h-5 rounded-full bg-brand-500/15 text-brand-600 flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">✓</span>
+                <span><strong>Validade das ofertas:</strong> Os preços, estoques e regras de aplicação dos cupons são definidos exclusivamente pelos lojistas parceiros e podem sofrer alterações sem aviso prévio.</span>
+              </li>
+            </ul>
+
+            <!-- Box interativo com o Link Oficial de Afiliado -->
+            <div class="mt-5 p-4 sm:p-5 rounded-xl bg-white border border-brand-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 no-print">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Vitrine Oficial • Link de Afiliado</span>
+                </div>
+                <p class="text-sm font-semibold text-slate-900">
+                  Confira os cupons e ofertas ativos diretamente na plataforma parceira:
+                </p>
+                <p class="text-xs text-slate-500 font-mono break-all">
+                  https://s.shopee.com.br/2gCfp5hdzC
+                </p>
+              </div>
+              <div class="flex items-center gap-2 shrink-0">
+                <button onclick="copyAffiliateLink()"
+                        class="px-3.5 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold transition-colors cursor-pointer">
+                  Copiar Link
+                </button>
+                <a href="https://s.shopee.com.br/2gCfp5hdzC" target="_blank" rel="noopener noreferrer sponsored"
+                   class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-sm transition-colors">
+                  <span>Abrir Ofertas</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 3: Coleta de Dados e Informações -->
+        <section id="coleta-dados" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">3</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Coleta de Dados e Informações
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              O aplicativo <strong>Cupons de Descontos</strong> foi projetado sob o princípio da <strong>minimização de dados (Privacy by Design)</strong>. Você pode navegar, visualizar e copiar códigos de desconto sem a necessidade de criar uma conta ou fornecer nome completo, CPF, endereço ou dados bancários.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/70">
+                <h3 class="font-display font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                  Dados Técnicos Não Identificáveis
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Para garantir estabilidade e compatibilidade, podemos coletar automaticamente informações técnicas agregadas, como modelo do dispositivo, versão do sistema operacional (Android/iOS), idioma do aparelho, registros anônimos de falhas (crash logs) e métricas gerais de cliques em categorias ou cupons.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/70">
+                <h3 class="font-display font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                  Cookies e Identificadores de Afiliados
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Ao tocar em um link de oferta, o navegador ou aplicativo parceiro (como a Shopee) pode utilizar cookies ou parâmetros técnicos de atribuição de clique para identificar que o acesso se originou no <strong>Cupons de Descontos</strong>, viabilizando a validação do cupom e a atribuição de comissão.
+                </p>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm bg-slate-50 border-l-4 border-slate-400 p-3.5 rounded-r-xl text-slate-600">
+              <strong>Nota sobre notificações push:</strong> Caso você opte voluntariamente por ativar alertas de novos cupons no seu dispositivo, um token anônimo de notificação será gerado pelo sistema operacional. Você pode desativar essas notificações a qualquer momento nas configurações do seu celular.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 4: Uso das Informações -->
+        <section id="uso-informacoes" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">4</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Uso das Informações
+            </h2>
+          </div>
+          <div class="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              As informações técnicas e métricas anônimas tratadas pelo aplicativo são utilizadas estritamente para finalidades legítimas e transparentes:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Funcionamento e Redirecionamento:</strong> Garantir que os links de cupons e ofertas abram corretamente no navegador ou aplicativo da loja parceira.</li>
+              <li><strong>Melhoria da Experiência do Usuário:</strong> Identificar quais categorias de descontos são mais relevantes para priorizar promoções úteis e funcionais.</li>
+              <li><strong>Desempenho e Correção de Erros:</strong> Diagnosticar falhas técnicas, lentidão ou incompatibilidades em diferentes versões de sistemas operacionais.</li>
+              <li><strong>Segurança e Prevenção a Fraudes:</strong> Proteger a infraestrutura do aplicativo contra acessos automatizados abusivos, spam ou tentativas de violação.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Seção 5: Compartilhamento com Terceiros e Parceiros -->
+        <section id="compartilhamento" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">5</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Compartilhamento com Terceiros e Parceiros
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              <strong>Nós não vendemos, alugamos ou comercializamos dados pessoais dos nossos usuários sob nenhuma hipótese.</strong> O compartilhamento de informações técnicas ocorre apenas nas seguintes situações estritamente necessárias para a operação do serviço:
+            </p>
+            <div class="space-y-3">
+              <div class="p-4 rounded-xl border border-slate-200/80">
+                <h3 class="font-semibold text-slate-900 text-sm sm:text-base">a) Plataformas de E-commerce e Redes de Afiliados</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                  Quando você interage com uma oferta (como os links da <strong>Shopee</strong>), parâmetros técnicos de referência são transmitidos para registrar a origem do redirecionamento. A partir do momento em que você acessa o ambiente do parceiro, o tratamento de quaisquer dados cadastrais ou de compra passa a ser regido exclusivamente pela política de privacidade da respectiva plataforma.
+                </p>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-200/80">
+                <h3 class="font-semibold text-slate-900 text-sm sm:text-base">b) Provedores de Infraestrutura, Hospedagem e Análise</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                  Podemos utilizar serviços confiáveis de computação em nuvem, distribuição de conteúdo (CDN) e ferramentas de monitoramento de estabilidade (como Google Firebase / Crashlytics) para hospedar a base de cupons e manter o aplicativo rápido e disponível.
+                </p>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-200/80">
+                <h3 class="font-semibold text-slate-900 text-sm sm:text-base">c) Cumprimento de Obrigação Legal</h3>
+                <p class="text-sm text-slate-600 mt-1">
+                  Poderemos divulgar informações caso seja exigido por lei, regulamento aplicável, ordem judicial ou solicitação formal de autoridade governamental competente.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 6: Direitos do Usuário (LGPD) -->
+        <section id="direitos-lgpd" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">6</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Direitos do Usuário (LGPD)
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Em conformidade com o artigo 18 da <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018)</strong>, você, enquanto titular de dados, possui direitos garantidos e pode exercê-los a qualquer momento de forma gratuita:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <span class="text-brand-500 font-bold">•</span>
+                <div><strong class="text-slate-800">Confirmação e Acesso:</strong> Confirmar a existência de tratamento e acessar eventuais dados associados a você.</div>
+              </div>
+              <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <span class="text-brand-500 font-bold">•</span>
+                <div><strong class="text-slate-800">Correção:</strong> Solicitar a retificação de dados incompletos, inexatos ou desatualizados.</div>
+              </div>
+              <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <span class="text-brand-500 font-bold">•</span>
+                <div><strong class="text-slate-800">Anonimização ou Eliminação:</strong> Requerer a exclusão ou bloqueio de dados desnecessários ou excessivos.</div>
+              </div>
+              <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <span class="text-brand-500 font-bold">•</span>
+                <div><strong class="text-slate-800">Revogação do Consentimento:</strong> Retirar permissões concedidas anteriormente (como notificações push) a qualquer tempo.</div>
+              </div>
+              <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-slate-50 border border-slate-100 sm:col-span-2">
+                <span class="text-brand-500 font-bold">•</span>
+                <div><strong class="text-slate-800">Informação sobre Compartilhamento:</strong> Obter esclarecimentos claros sobre entidades públicas ou privadas com as quais realizamos uso compartilhado de informações.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 7: Segurança e Retenção de Dados -->
+        <section id="seguranca" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">7</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Segurança e Retenção de Dados
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Adotamos boas práticas técnicas e administrativas de segurança da informação para proteger os dados trafegados pelo aplicativo contra acessos não autorizados, destruição, perda, alteração ou divulgação indevida. Entre essas medidas, destacam-se a comunicação criptografada via protocolo <strong>HTTPS/TLS</strong>, controle restrito de acesso aos servidores e monitoramento contínuo de integridade.
+            </p>
+            <p>
+              Os registros técnicos anônimos são mantidos somente pelo período necessário para cumprir as finalidades descritas nesta Política (como análise de estabilidade e auditoria de cliques de afiliados) ou para atender a exigências legais e regulatórias, sendo posteriormente eliminados ou anonimizados de forma definitiva.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 8: Público Infantil -->
+        <section id="publico-infantil" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">8</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Público Infantil e Adolescentes
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              O aplicativo <strong>Cupons de Descontos</strong> é voltado para consumidores com capacidade civil para realizar compras online e <strong>não é direcionado a crianças menores de 13 (treze) anos</strong>, nem deve ser utilizado por menores de 18 (dezoito) anos sem a devida supervisão e autorização de seus pais ou responsáveis legais.
+            </p>
+            <p>
+              Não coletamos intencionalmente dados pessoais de crianças ou adolescentes. Caso pais ou responsáveis identifiquem que um menor forneceu informações através de nossos canais de contato sem consentimento, solicitamos que entrem em contato conosco para que possamos remover imediatamente tais registros.
+            </p>
+          </div>
+        </section>
+
+        <!-- Seção 9: Alterações nesta Política e Contato -->
+        <section id="contato" class="scroll-mt-28 bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-xl bg-brand-100 text-brand-600 font-display font-bold text-sm flex items-center justify-center shrink-0">9</span>
+            <h2 class="font-display text-xl sm:text-2xl font-bold text-slate-900">
+              Alterações nesta Política e Contato
+            </h2>
+          </div>
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+            <p>
+              Podemos atualizar esta Política de Privacidade periodicamente para refletir melhorias no aplicativo, novos parceiros de afiliados ou alterações na legislação vigente. Sempre que houver mudanças relevantes, atualizaremos a data no topo desta página e, quando apropriado, notificaremos os usuários dentro do próprio aplicativo.
+            </p>
+            <p>
+              Se você tiver qualquer dúvida, sugestão ou solicitação relacionada à sua privacidade, ao exercício dos seus direitos previstos na LGPD ou ao funcionamento dos cupons divulgados, entre em contato com nossa equipe:
+            </p>
+
+            <!-- Card de Contato & Ações Finais -->
+            <div class="mt-5 p-5 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span class="text-xs uppercase tracking-wider text-brand-400 font-bold">Canal Oficial de Privacidade &amp; Suporte</span>
+                <p class="font-display font-bold text-lg mt-0.5">suporte@cuponsdedescontos.app</p>
+                <p class="text-xs text-slate-400 mt-1">Aplicativo: Cupons de Descontos • Vigência: Novembro de 2026</p>
+              </div>
+              <div class="flex flex-wrap items-center gap-2.5 no-print">
+                <button onclick="copyEmail()"
+                        class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors cursor-pointer">
+                  Copiar E-mail
+                </button>
+                <button onclick="window.print()"
+                        class="px-4 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold transition-colors cursor-pointer">
+                  Salvar em PDF
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-white border-t border-slate-200 mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-display font-extrabold text-sm shadow-sm">
+            %
+          </div>
+          <div>
+            <p class="font-display font-bold text-slate-900 text-sm">Cupons de Descontos</p>
+            <p class="text-xs text-slate-500">© 2026 Cupons de Descontos. Todos os direitos reservados.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-500 no-print">
+          <a href="#introducao" class="hover:text-brand-600 transition-colors">Início</a>
+          <span>•</span>
+          <a href="#afiliados" class="hover:text-brand-600 transition-colors">Divulgação de Afiliados</a>
+          <span>•</span>
+          <a href="https://s.shopee.com.br/2gCfp5hdzC" target="_blank" rel="noopener noreferrer sponsored" class="text-brand-600 font-semibold hover:underline">
+            Ofertas Parceiras (Shopee)
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de Interatividade (Cópia para área de transferência, Toast e ScrollSpy) -->
+  <script>
+    // Exibe notificação elegante sem utilizar alert()
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      if (!toast || !toastMsg) return;
+
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3200);
+    }
+
+    // Função utilitária de cópia compatível com iframes e navegadores modernos
+    function fallbackCopyText(text, successMessage) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMessage);
+      } catch (err) {
+        showToast('Não foi possível copiar automaticamente.');
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function copyAffiliateLink() {
+      fallbackCopyText('https://s.shopee.com.br/2gCfp5hdzC', 'Link de afiliado copiado!');
+    }
+
+    function copyEmail() {
+      fallbackCopyText('suporte@cuponsdedescontos.app', 'E-mail de suporte copiado!');
+    }
+
+    function copyPolicyText() {
+      const content = document.getElementById('policy-content');
+      if (!content) return;
+      const cleanText = "POLÍTICA DE PRIVACIDADE - CUPONS DE DESCONTOS (Atualizada em Novembro de 2026)\n\n" + content.innerText;
+      fallbackCopyText(cleanText, 'Texto completo da Política copiado!');
+    }
+
+    // Destaque automático da seção ativa no índice lateral (ScrollSpy)
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('main section[id]');
+      const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -65% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            sidebarLinks.forEach(link => {
+              const isMatch = link.getAttribute('data-section') === id;
+              if (isMatch) {
+                link.classList.add('bg-brand-50', 'text-brand-700', 'font-semibold');
+                link.classList.remove('text-slate-600');
+              } else {
+                link.classList.remove('bg-brand-50', 'text-brand-700', 'font-semibold');
+                link.classList.add('text-slate-600');
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
+</body>
+</html>
